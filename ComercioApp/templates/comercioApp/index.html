@@ -1,0 +1,32 @@
+{% extends './base.html' %}   <!-- Aquí traemos la plantilla de base-->
+{% load static %}
+
+{% block tituloPagina%} 
+Inicio - Ecommerce
+{%endblock%}
+
+
+{%block contenidoPagina%}
+        <section id="about">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Beneficios de la tienda</h2>
+                        <p class="lead">20% off con tarjetas de bancos seleccionados:</p>
+                        <ul>
+                            <li>Santander Rio</li>
+                            <li>Banco Macro</li>
+                            <li>Banco Nación</li>
+                            <li>HSBC</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+{% endblock %}
