@@ -89,6 +89,11 @@
               <p><b>Precio: </b><span>${{producto.precio}}</span></p>
             </div>
             <div class="w-100 text-center mb-3">
+              <a
+                href="{% url 'verproducto' producto.id%}"
+                class="btn btn-outline-dark text-decoration-none"
+                >ver</a
+              >
               <button class="btn btn-outline-info">Editar</button>
               <button class="btn btn-outline-danger">Eliminar</button>
             </div>

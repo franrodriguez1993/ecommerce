@@ -16,6 +16,7 @@
             <th scope="col">Nombre</th>
             <th scope="col">Apellido</th>
             <th scope="col">Email</th>
+            <th scope="col">Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -25,6 +26,20 @@
             <td class="table-light">{{empleado.nombre}}</td>
             <td class="table-light">{{empleado.apellido}}</td>
             <td class="table-light">{{empleado.email}}</td>
+            <td class="text-center table-light">
+              <a
+                href=""
+                class="text-primary badge badge-primary text-decoration-none"
+              >
+                <i class="bi bi-pencil-square"></i> Editar</a
+              >
+              <a
+                href="#"
+                class="text-danger badge badge-danger text-decoration-none"
+              >
+                <i class="bi bi-x-square"></i> Eliminar</a
+              >
+            </td>
           </tr>
           {%endfor%}
         </tbody>

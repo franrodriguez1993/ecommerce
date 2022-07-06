@@ -11,5 +11,6 @@ urlpatterns = [
     path('crearempleado/',crear_empleado,name="crear_empleado"),
     path('crearcliente/',crear_cliente,name="crear_cliente"),
     path('buscarproducto/',buscar_producto,name='busqueda_producto'),
+    path('verproducto/<producto_id>/',ver_producto, name='verproducto'),
     path("base/",base),
 ]

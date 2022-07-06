@@ -134,3 +134,9 @@ def buscar_producto(request):
         else:
             productos = [] #Curso.objects.all()
         return render(request,"comercioApp/busqueda_producto.html",{"productos":productos})
+      
+      
+def ver_producto(request, producto_id):
+  producto = Productos.objects.get(id=producto_id)
+  
+  return render(request,"comercioApp/verProducto.html",{"producto":producto})
