@@ -11,24 +11,27 @@ Producto {% endblock %} {% block contenidoPagina %}
 </form>
 
 <!--Resultado Busqueda -->
-<div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
-  {%for producto in productos%}
-  <div class="col">
-    <div class="card h-100">
-      <img src="{{producto.imagen}}" class="imgproducto" />
-      <div class="card-body text-center">
-        <h5 class="card-title"><b>Modelo: </b>{{producto.modelo}}</h5>
-        <p class="card-text">
-          <b><b>Marca: </b>{{producto.marca}}</b>
-        </p>
-        <p><b>Precio: </b><span>${{producto.precio}}</span></p>
-      </div>
-      <div class="w-100 text-center mb-3">
-        <button class="btn btn-outline-info">Editar</button>
-        <button class="btn btn-outline-danger">Eliminar</button>
+<section class="container-lg">
+  <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
+    {%for producto in productos%}
+    <div class="col">
+      <div class="card h-100">
+        <img src="{{producto.imagen}}" class="imgproducto" />
+        <div class="card-body text-center">
+          <h5 class="card-title"><b>Modelo: </b>{{producto.modelo}}</h5>
+          <p class="card-text">
+            <b><b>Marca: </b>{{producto.marca}}</b>
+          </p>
+          <p><b>Precio: </b><span>${{producto.precio}}</span></p>
+        </div>
+        <div class="w-100 text-center mb-3">
+          <button class="btn btn-outline-info">Editar</button>
+          <button class="btn btn-outline-danger">Eliminar</button>
+        </div>
       </div>
     </div>
+    {%endfor%}
   </div>
-  {%endfor%}
-</div>
-> {% endblock%}
+</section>
+
+{% endblock%}

@@ -9,6 +9,8 @@ from .forms import *
 def inicio(request):
     return render(request,"comercioApp/index.html",{})
 
+def about(request):
+    return render(request,"comercioApp/about.html",{})
 
 def productos(request):
     
