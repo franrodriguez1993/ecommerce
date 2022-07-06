@@ -8,7 +8,7 @@ class EmpleadosAdmin(admin.ModelAdmin):
 
 
 class ProductosAdmin(admin.ModelAdmin):
-    list_display = ('marca','modelo','precio')
+    list_display = ('marca','modelo','precio','imagen')
     search_fields = ('nombre', 'marca','modelo','precio')
     
 class ClientesAdmin(admin.ModelAdmin):

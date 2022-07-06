@@ -2,6 +2,7 @@ from django import forms
 
 class NuevoProducto(forms.Form):
     modelo = forms.CharField(max_length=30,label="Modelo:")
+    imagen = forms.CharField(max_length=400,label="Imagen:")
     marca = forms.CharField(max_length=30,label="Marca:")
     precio = forms.IntegerField(min_value=0,label="Precio:")
     

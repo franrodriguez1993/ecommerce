@@ -47,7 +47,7 @@ def crear_producto(request):
 
             info_producto = formulario.cleaned_data
         
-            producto = Productos(marca=info_producto["marca"],modelo=info_producto["modelo"] ,precio=int(info_producto["precio"]))
+            producto = Productos(marca=info_producto["marca"],modelo=info_producto["modelo"],imagen=info_producto["imagen"] ,precio=int(info_producto["precio"]))
 
             producto.save() # guardamos en la bd
             

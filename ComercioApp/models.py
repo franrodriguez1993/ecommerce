@@ -13,6 +13,7 @@ class Empleados(models.Model):
 
 class Productos(models.Model):
     marca = models.CharField(max_length=30)
+    imagen = models.CharField(max_length=400)
     modelo = models.CharField(max_length=30)
     precio = models.IntegerField()
     
