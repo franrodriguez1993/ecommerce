@@ -30,13 +30,13 @@
             <td class="table-light">{{cliente.email}}</td>
             <td class="text-center table-light">
               <a
-                href=""
+                href="{% url 'editarcliente' cliente.id%}"
                 class="text-primary badge badge-primary text-decoration-none"
               >
                 <i class="bi bi-pencil-square"></i> Editar</a
               >
               <a
-                href="#"
+                href="{% url 'eliminarcliente' cliente.id%}"
                 class="text-danger badge badge-danger text-decoration-none"
               >
                 <i class="bi bi-x-square"></i> Eliminar</a

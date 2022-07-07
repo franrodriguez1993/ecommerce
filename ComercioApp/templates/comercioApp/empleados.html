@@ -28,13 +28,13 @@
             <td class="table-light">{{empleado.email}}</td>
             <td class="text-center table-light">
               <a
-                href=""
+                href="{%url 'editarempleado' empleado.id%}"
                 class="text-primary badge badge-primary text-decoration-none"
               >
                 <i class="bi bi-pencil-square"></i> Editar</a
               >
               <a
-                href="#"
+                href="{% url 'eliminarempleado' empleado.id%}"
                 class="text-danger badge badge-danger text-decoration-none"
               >
                 <i class="bi bi-x-square"></i> Eliminar</a

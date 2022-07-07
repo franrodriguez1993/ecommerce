@@ -94,8 +94,16 @@
                 class="btn btn-outline-dark text-decoration-none"
                 >ver</a
               >
-              <button class="btn btn-outline-info">Editar</button>
-              <button class="btn btn-outline-danger">Eliminar</button>
+              <a
+                href="{% url 'editarproducto' producto.id%}"
+                class="btn btn-outline-info text-decoration-none"
+                >Editar</a
+              >
+              <a
+                href="{%url 'eliminarproducto' producto.id%}"
+                class="btn btn-outline-danger text-decoration-none"
+                >Eliminar</a
+              >
             </div>
           </div>
         </div>
