@@ -94,6 +94,7 @@
                 class="btn btn-outline-dark text-decoration-none"
                 >ver</a
               >
+              {% if user.is_authenticated %} {% if user.is_staff %}
               <a
                 href="{% url 'editarproducto' producto.id%}"
                 class="btn btn-outline-info text-decoration-none"
@@ -104,6 +105,9 @@
                 class="btn btn-outline-danger text-decoration-none"
                 >Eliminar</a
               >
+              {% endif %}
+              <!---->
+              {% endif %}
             </div>
           </div>
         </div>
