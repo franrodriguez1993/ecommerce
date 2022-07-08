@@ -35,3 +35,11 @@ class Clientes(models.Model):
     
     class Meta:
         verbose_name_plural = "Clientes"
+        
+
+class Comentario(models.Model):
+  autor = models.ForeignKey(User,on_delete=models.CASCADE)
+  producto = models.ForeignKey(Productos, related_name="comments" ,on_delete=models.CASCADE)
+  body = models.TextField()
+  fecha = models.DateTimeField(auto_now_add=True)
+    

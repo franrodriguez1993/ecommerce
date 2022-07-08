@@ -1,0 +1,21 @@
+{% extends 'comercioApp/base.html' %} {% load static %}
+
+<!---->
+{% block tituloPagina %} Register - CeluShop {% endblock %}
+
+<!---->
+{% block contenidoPagina %}
+<h2 class="text-center mt-3">Agregar un comentario</h2>
+
+<form method="post">
+  {% csrf_token %}
+
+  <form>
+    <div class="mb-3 d-flex flex-column align-items-center">
+      {{form}}
+
+      <input type="submit" class="mt-3" value="Agregar comentario" />
+    </div>
+  </form>
+</form>
+{% endblock%}

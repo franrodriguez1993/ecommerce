@@ -363,3 +363,20 @@ def agregar_avatar(request):
         form = AvatarForm()
     
     return render(request,"comercioApp/agregar_avatar.html",{"form":form})
+
+@login_required
+def agregar_comentario(request,producto_id):
+    user = request.user
+    producto = Productos.objects.get(id=producto_id)
+    if request.method == "POST":
+      formulario = FormularioComentario(request.POST)
+      if formulario.is_valid():
+        info = formulario.cleaned_data
+      
+      comentario = Comentario(autor=user,producto=producto,body=info["body"])
+      comentario.save()
+      return redirect("comercioApp/verProducto.html")
+    else:
+      form = FormularioComentario()
+      return render(request,"comercioApp/agregar_comentario.html",{"form":form})
+    

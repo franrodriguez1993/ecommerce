@@ -19,5 +19,5 @@ class ClientesAdmin(admin.ModelAdmin):
 admin.site.register(Empleados,EmpleadosAdmin)
 admin.site.register(Productos,ProductosAdmin)
 admin.site.register(Clientes,ClientesAdmin)
-
+admin.site.register(Comentario)
 admin.site.register(Avatar)

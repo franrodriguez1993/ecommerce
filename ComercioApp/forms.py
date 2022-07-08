@@ -47,3 +47,8 @@ class AvatarForm(forms.Form):
     class Meta:
         model = Avatar
         fields = ['imagen']
+        
+        
+        
+class FormularioComentario(forms.Form):
+    body= forms.CharField(max_length=255)
