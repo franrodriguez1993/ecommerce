@@ -1,9 +1,11 @@
 Proyecto en Django - Web Ecommerce de celulares
 
-App que cuenta con 3 models:
-* Producto
-* Clientes
-* Empleados
+App que cuenta con 4 models:
+
+- Producto
+- Clientes
+- Empleados
+- Comentarios
 
 Ingresar a través de la siguiente URL:
 
@@ -11,9 +13,14 @@ http://127.0.0.1:8000/comercioApp/
 
 Se puede navegar a través de diferentes secciones como:
 
-* Catálago de celulares con su respectivo Modelo - Marca - Precio. Ademas permite agregar nuevos productos y un buscador para encontrar los productos por sus caracteristicas.
+- Catálago de celulares con su respectivo Modelo - Marca - Precio. Ademas permite agregar nuevos productos, modificar los existentes, eliminarlos y un buscador para encontrar los productos por sus caracteristicas. Permite agregar comentarios para usuarios logueados.
 
-* Lista de los empleados del local con sus datos personales Nombre - Apellido - Email. Permite agregar nuevos empleados y buscarlos a través de sus datos personales.
+- Sección nosotros con los respectivos datos personales de los miembros del proyecto.
 
-* Lista de los clientes del local con sus datos personales Nombre - Apellido - Email. Permite agregar nuevos clientes despues de una compra y buscarlos a través de sus datos personales.
+Operaciones de los administradores:
 
+- Lista de los empleados del local con sus datos personales Nombre - Apellido - Email. Permite agregar nuevos empleados, modificarlos, eliminarlos y buscarlos a través de sus datos personales.
+
+- Lista de los clientes del local con sus datos personales Nombre - Apellido - Email. Permite agregar nuevos clientes modificarlos, eliminarlos despues de una compra y buscarlos a través de sus datos personales.
+
+Ademas permite registrarse, inicio de sesión y modificación de perfil.
