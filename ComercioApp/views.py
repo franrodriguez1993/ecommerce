@@ -362,7 +362,7 @@ def agregar_avatar(request):
     else:
         form = AvatarForm()
     
-    return render(request,"comercioApp/agregar_avatar.html",{"form":form})
+    return render(request,"productos",{"form":form})
 
 @login_required
 def agregar_comentario(request,producto_id):
@@ -380,3 +380,5 @@ def agregar_comentario(request,producto_id):
       form = FormularioComentario()
       return render(request,"comercioApp/agregar_comentario.html",{"form":form})
     
+    
+    # 
