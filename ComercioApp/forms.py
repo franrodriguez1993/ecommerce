@@ -51,4 +51,4 @@ class AvatarForm(forms.Form):
         
         
 class FormularioComentario(forms.Form):
-    body= forms.CharField(max_length=255)
+    comentario= forms.CharField(max_length=255)
