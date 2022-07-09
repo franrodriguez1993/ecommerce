@@ -113,9 +113,13 @@
         </div>
         {%endfor%}
       </div>
+      {% if user.is_authenticated %} {% if user.is_staff %}
       <button class="mt-3 btn btn-secondary ms-7 botoncarga">
         <a href="{%url 'crear_producto'%}">Cargar Producto</a>
       </button>
+      {% endif %}
+      <!---->
+      {% endif %}
     </div>
   </div>
 </section>

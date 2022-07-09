@@ -29,9 +29,13 @@
     <form action="" method="post">
       {% csrf_token %} {{form.as_p}}
       <button class="btn btn-dark" type="submit">Guardar</button>
+
+      <!---->
+      {% if not user.avatar.imagen.url %}
       <a class="btn btn-success" href="{%url 'agregar_avatar'%}"
-        >Cambiar avatar</a
+        >Agregar avatar</a
       >
+      {% endif %}
     </form>
   </div>
 </section>

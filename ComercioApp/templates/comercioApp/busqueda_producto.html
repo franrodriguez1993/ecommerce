@@ -12,7 +12,7 @@ Producto {% endblock %} {% block contenidoPagina %}
 
 <!--Resultado Busqueda -->
 <section class="container-lg">
-  <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
     {%for producto in productos%}
     <div class="col">
       <div class="card h-100">
@@ -25,13 +25,37 @@ Producto {% endblock %} {% block contenidoPagina %}
           <p><b>Precio: </b><span>${{producto.precio}}</span></p>
         </div>
         <div class="w-100 text-center mb-3">
-          <button class="btn btn-outline-info">Editar</button>
-          <button class="btn btn-outline-danger">Eliminar</button>
+          <a
+            href="{% url 'verproducto' producto.id%}"
+            class="btn btn-outline-dark text-decoration-none"
+            >ver</a
+          >
+          {% if user.is_authenticated %} {% if user.is_staff %}
+          <a
+            href="{% url 'editarproducto' producto.id%}"
+            class="btn btn-outline-info text-decoration-none"
+            >Editar</a
+          >
+          <a
+            href="{%url 'eliminarproducto' producto.id%}"
+            class="btn btn-outline-danger text-decoration-none"
+            >Eliminar</a
+          >
+          {% endif %}
+          <!---->
+          {% endif %}
         </div>
       </div>
     </div>
     {%endfor%}
   </div>
+  {% if user.is_authenticated %} {% if user.is_staff %}
+  <button class="mt-3 btn btn-secondary ms-7 botoncarga">
+    <a href="{%url 'crear_producto'%}">Cargar Producto</a>
+  </button>
+  {% endif %}
+  <!---->
+  {% endif %}
 </section>
 
 {% endblock%}

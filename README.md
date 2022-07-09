@@ -9,7 +9,7 @@ App que cuenta con 4 models:
 
 Ingresar a través de la siguiente URL:
 
-http://127.0.0.1:8000/comercioApp/
+http://127.0.0.1:8000/
 
 Se puede navegar a través de diferentes secciones como:
 
@@ -24,3 +24,6 @@ Operaciones de los administradores:
 - Lista de los clientes del local con sus datos personales Nombre - Apellido - Email. Permite agregar nuevos clientes modificarlos, eliminarlos despues de una compra y buscarlos a través de sus datos personales.
 
 Ademas permite registrarse, inicio de sesión y modificación de perfil.
+
+LINK A VIDEO EXPLICATIVO:
+https://www.youtube.com/watch?v=YpmtMdQM6Pg&ab_channel=FrancoRodr%C3%ADguez
