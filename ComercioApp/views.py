@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-
+from django.contrib import messages
 from ComercioApp.models import *
 
 from .forms import *
@@ -8,7 +8,6 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from .forms import *
 from django.contrib.auth import login, logout, authenticate
 
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
 
@@ -24,7 +23,8 @@ def about(request):
 def productos(request):
     
     productos = Productos.objects.all()  #Nos traemos todos los cursos de la DB
-    return render(request,"comercioApp/productos.html",{"productos": productos})
+    count = len(productos)
+    return render(request,"comercioApp/productos.html",{"productos": productos,"count":count})
 
 
 def empleados(request):
@@ -149,7 +149,7 @@ def ver_producto(request, producto_id):
 
   producto = Productos.objects.get(id=producto_id)
   
-  return render(request,"comercioApp/verProducto.html",{"producto":producto})
+  return render(request,"comercioApp/ver_producto.html",{"producto":producto})
 
 @staff_member_required
 def editar_producto(request,producto_id):
@@ -267,6 +267,7 @@ def login_request(request):
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
             user = authenticate(username=username, password=password)
+            
 
             if user is not None:
                 login(request, user)
@@ -274,6 +275,7 @@ def login_request(request):
             else:
                 return redirect("login")
         else:
+            messages.info(request, 'Datos inválidos')
             return redirect("login")
 
     form = AuthenticationForm()

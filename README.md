@@ -11,6 +11,11 @@ Ingresar a través de la siguiente URL:
 
 http://127.0.0.1:8000/
 
+Usuario admin:
+
+user: franco
+password: franco
+
 Se puede navegar a través de diferentes secciones como:
 
 - Catálago de celulares con su respectivo Modelo - Marca - Precio. Ademas permite agregar nuevos productos, modificar los existentes, eliminarlos y un buscador para encontrar los productos por sus caracteristicas. Permite agregar comentarios para usuarios logueados.

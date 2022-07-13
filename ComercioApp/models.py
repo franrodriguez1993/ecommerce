@@ -1,4 +1,4 @@
-from tabnanny import verbose
+
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -42,4 +42,4 @@ class Comentario(models.Model):
   producto = models.ForeignKey(Productos, related_name="comments" ,on_delete=models.CASCADE)
   body = models.TextField()
   fecha = models.DateTimeField(auto_now_add=True)
-    
+     

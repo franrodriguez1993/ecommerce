@@ -13,5 +13,24 @@
       <button type="submit">Iniciar Sesión</button>
     </form>
   </div>
+  {% if messages %}
+  <ul class="messages text-center">
+    {% for message in messages %}
+    <li
+      {%
+      if
+      message.tags
+      %}
+      class="{{ message.tags }}"
+      {%
+      endif
+      %}
+      style="list-style: none; color: red; font-weight: bolder"
+    >
+      {{ message }}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
 </section>
 {% endblock %}
